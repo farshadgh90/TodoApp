@@ -12,7 +12,13 @@ const TodoApp = () => {
     const [refresh, setRefresh] = useState(0)
 
     useEffect(() => {
-        const storedTasks = JSON.parse(localStorage.getItem("tasks"))
+        let storedTasks = localStorage.getItem("tasks")
+        if(storedTasks) {
+            storedTasks = JSON.parse(storedTasks)
+        }
+        else{
+            storedTasks = []
+        }
         setTasks(storedTasks)
     },[])
 
