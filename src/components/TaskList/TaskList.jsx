@@ -1,15 +1,14 @@
 import React from "react";
+import TaskItem from "../TaskItem/TaskItem";
+import "./TaskList.css"
 
-const TaskList = () => (
-    <div>
+const TaskList = ({tasks, deleteTask, handleChangeStatus}) => (
+    <div className="TaskList">
         <ul>
-          <li>
-            <input type="checkbox" />
-            <h2>Build This App</h2>
-            <button>Delete</button>
-          </li>
+          {tasks.map(task => 
+          <TaskItem key={`task-${task.id}`} task={task} deleteTask={deleteTask} handleChangeStatus={handleChangeStatus} />)}
         </ul>
-      </div>
+    </div>
 )
 
 export default TaskList

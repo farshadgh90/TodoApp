@@ -1,0 +1,23 @@
+.FilterFooter{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 5px;
+    background-color: white;
+    margin-top: 10px;
+}
+
+.filters ul{
+    display: flex;
+    gap: 2px;
+}
+
+.filters ul li button{
+    cursor: pointer;
+    padding: 3px 7px;
+}
+
+.active{
+    background-color: gray;
+    color: white;
+}
